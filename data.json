@@ -1,0 +1,26 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "avatar_url": "https://avatars3.githubusercontent.com/u/41807133?s=400&u=d8828009d88597a7619400a8f04c95ee1679ebc8&v=4",
+            "name": "Douglas Scaini",
+            "birth": 858816000000,
+            "select_value": "Doutorado",
+            "class_type": "EAD",
+            "services": "Algoritmos, Lógica",
+            "created_at": 1595357276030
+        }
+    ],
+    "students": [
+        {
+            "id": 1,
+            "avatar_url": "https://source.unsplash.com/collection/8969654/1000x1000",
+            "name": "Douglas Scaini",
+            "email": "douglas.scaini@unoesc.edu.br",
+            "birth": 858816000000,
+            "gender": "M",
+            "year": "3° Ensino Médio",
+            "time": "50"
+        }
+    ]
+}

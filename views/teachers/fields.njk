@@ -1,0 +1,49 @@
+<div class="item">
+    <div>Imagem de perfil</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder="Insira a URL de uma imagem..." value="{{teacher.avatar_url}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome</div>
+    <div>
+        <input type="text" name="name" placeholder="Insira seu nome..." value="{{teacher.name}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input type="date" name="birth" value="{{teacher.birth}}" required="required">
+    </div>
+</div>
+
+<div class="item">
+    <div>Escolaridade</div>
+    <div>
+        <select name="select_value">
+            <option value="Ensino médio completo" {% if teacher.select_value == 'Ensino médio completo' %} selected="selected" {% endif %}>Ensino médio completo</option>
+            <option value="Ensino superior completo" {% if teacher.select_value == 'Ensino superior completo' %} selected="selected" {% endif %}>Ensino superior completo</option>
+            <option value="Mestrado" {% if teacher.select_value == 'Mestrado' %} selected="selected" {% endif %}>Mestrado</option>
+            <option value="Doutorado" {% if teacher.select_value == 'Doutorado' %} selected="selected" {% endif %}>Doutorado</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Tipo da aula</div>
+    <div>
+        <span><input type="radio" name="class_type" value="Presencial" checked="checked" {% if teacher.class_type == 'Presencial'%} checked="checked" {% endif %}>Presencial</span>
+        <span><input type="radio" name="class_type" value="EAD" {% if teacher.class_type == 'EAD'%} checked="checked" {% endif %}>EAD</span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Matérias de atuação</div>
+    <div>
+        <input type="text" name="services" placeholder="Separe as matérias por vírgula..." value="{{teacher.services}}">
+    </div>
+</div>
+
+<button type="submit">Salvar</button>

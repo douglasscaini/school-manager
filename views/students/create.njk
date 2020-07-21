@@ -1,0 +1,15 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+    <form class="card" method="POST" action="/students">
+        <section class="avatar" style="background: url(https://source.unsplash.com/collection/332741/1000x1000) no-repeat center center / cover"></section>
+        <section class="details">
+            <h3>Novo Aluno</h3>
+
+            {% include 'students/fields.njk' %}
+
+        </section>
+    </form>
+
+{% endblock %}

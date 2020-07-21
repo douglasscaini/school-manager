@@ -1,0 +1,60 @@
+<div class="item">
+    <div>Imagem de perfil</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder="Insira a URL de uma imagem..." value="{{student.avatar_url}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome</div>
+    <div>
+        <input type="text" name="name" placeholder="Insira seu nome..." value="{{student.name}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Email</div>
+    <div>
+        <input type="email" name="email" placeholder="Insira seu email..." value="{{student.email}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input type="date" name="birth" value="{{student.birth}}" required="required">
+    </div>
+</div>
+
+<div class="item">
+    <div>Sexo</div>
+    <div>
+        <span><input type="radio" name="gender" value="M" checked="checked" {% if student.gender == "M" %} checked="checked" {% endif %}>Masculino</span>
+        <span><input type="radio" name="gender" value="F" {% if student.gender == "F" %} checked="checked" {% endif %}>Feminino</span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Série/Ano</div>
+    <div>
+        <select name="year">
+            <option value="5° Ensino Fundamental" {% if student.year == "5° Ensino Fundamental" %} select="select" {% endif %}>5° Ensino Fundamental</option>
+            <option value="6° Ensino Fundamental" {% if student.year == "6° Ensino Fundamental" %} select="select" {% endif %}>6° Ensino Fundamental</option>
+            <option value="7° Ensino Fundamental" {% if student.year == "7° Ensino Fundamental" %} select="select" {% endif %}>7° Ensino Fundamental</option>
+            <option value="8° Ensino Fundamental" {% if student.year == "8° Ensino Fundamental" %} select="select" {% endif %}>8° Ensino Fundamental</option>
+            <option value="9° Ensino Fundamental" {% if student.year == "9° - Ensino Fundamental" %} select="select" {% endif %}>9° Ensino Fundamental</option>
+            <option value="1° Ensino Médi" {% if student.year == "1° Ensino Médio" %} select="select" {% endif %}>1° Ensino Médio</option>
+            <option value="2° Ensino Médio" {% if student.year == "2° Ensino Médio" %} select="select" {% endif %}>2° Ensino Médio</option>
+            <option value="3° Ensino Médio" {% if student.year == "3° Ensino Médio" %} select="select" {% endif %}>3° Ensino Médio</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Horas (semanais)</div>
+    <div>
+         <input type="number" name="time" placeholder="Insira a quantidade de horas..." value="{{student.time}}">
+    </div>
+</div>
+
+<button type="submit">Salvar</button>
